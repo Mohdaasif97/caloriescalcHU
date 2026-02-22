@@ -1,0 +1,391 @@
+/* ========================
+   BASE
+======================== */
+.page { min-height: 100vh; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ========================
+   HEADER
+======================== */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e4e8f0;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+.headerInner {
+  max-width: 1100px; margin: 0 auto;
+  padding: 14px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 1.05rem; color: #16192e; }
+.logoFire { font-size: 1.3rem; }
+.accent { color: #f97316; }
+.nav { display: flex; gap: 24px; }
+.nav a { text-decoration: none; color: #555; font-size: 0.88rem; font-weight: 600; transition: color 0.2s; }
+.nav a:hover { color: #f97316; }
+
+/* ========================
+   HERO
+======================== */
+.hero {
+  background: linear-gradient(135deg, #16192e 0%, #1e1b4b 45%, #312e81 100%);
+  padding: 68px 20px 60px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -120px; right: -80px;
+  width: 440px; height: 440px;
+  background: radial-gradient(circle, #f9731622 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -80px; left: -60px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, #818cf822 0%, transparent 65%);
+  pointer-events: none;
+}
+.heroInner {
+  max-width: 1100px; margin: 0 auto;
+  position: relative; z-index: 1;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 48px; flex-wrap: wrap;
+}
+.heroLeft { flex: 1; min-width: 300px; }
+.heroPill {
+  display: inline-block;
+  background: rgba(249,115,22,0.15);
+  border: 1px solid rgba(249,115,22,0.35);
+  color: #fdba74;
+  padding: 6px 14px; border-radius: 100px;
+  font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.04em; margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.h1 {
+  font-size: clamp(1.85rem, 4vw, 2.9rem);
+  font-weight: 900; color: #fff;
+  line-height: 1.15; margin-bottom: 18px;
+  letter-spacing: -0.025em;
+}
+.h1Orange { color: #f97316; display: block; }
+.heroSub { font-size: 1.02rem; color: rgba(255,255,255,0.78); margin-bottom: 26px; line-height: 1.75; max-width: 520px; }
+.heroSub strong { color: #fdba74; }
+.heroBadges { display: flex; gap: 10px; flex-wrap: wrap; }
+.heroBadges span {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.88); padding: 6px 12px;
+  border-radius: 8px; font-size: 0.81rem; font-weight: 600;
+}
+
+/* Stats box */
+.heroRight { flex-shrink: 0; }
+.statsBox {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 20px; padding: 24px 28px;
+  display: flex; flex-direction: column; gap: 0;
+  min-width: 220px;
+  backdrop-filter: blur(8px);
+}
+.statItem { text-align: center; padding: 14px 0; }
+.statNum { display: block; font-size: 2rem; font-weight: 900; color: #f97316; line-height: 1; }
+.statLabel { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.6); font-weight: 600; margin-top: 4px; }
+.statDivider { height: 1px; background: rgba(255,255,255,0.1); }
+
+/* ========================
+   CALCULATOR
+======================== */
+.calcSection { padding: 56px 0 36px; }
+.calcCard {
+  background: #fff; border-radius: 24px;
+  box-shadow: 0 4px 52px rgba(0,0,0,0.1);
+  padding: 44px; max-width: 880px; margin: 0 auto;
+  border: 1px solid #e8eaf0;
+}
+.calcHeader { margin-bottom: 28px; }
+.calcHeader h2 { font-size: 1.55rem; font-weight: 800; color: #16192e; margin-bottom: 6px; }
+.calcHeader p { color: #777; font-size: 0.93rem; }
+
+/* Method selector */
+.methodRow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+.methodLabel { font-size: 0.85rem; font-weight: 700; color: #555; white-space: nowrap; }
+.methodBtns { display: flex; gap: 8px; flex-wrap: wrap; }
+.methodBtn {
+  padding: 8px 16px;
+  background: #f4f5fb; border: 2px solid #e4e7f0;
+  border-radius: 10px; font-size: 0.85rem;
+  font-weight: 700; font-family: inherit;
+  color: #555; cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; gap: 6px;
+}
+.methodBtn:hover { border-color: #f97316; color: #ea580c; }
+.methodActive { border-color: #f97316; background: #fff7ed; color: #ea580c; }
+.methodTag {
+  background: #f97316; color: #fff;
+  font-size: 0.68rem; padding: 2px 6px;
+  border-radius: 100px; font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+/* Steps */
+.step { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #f0f2fa; }
+.step:last-of-type { border-bottom: none; }
+.stepHead {
+  font-size: 0.85rem; font-weight: 800; color: #555;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+}
+.stepNum {
+  background: #f97316; color: #fff;
+  width: 22px; height: 22px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 900; flex-shrink: 0;
+}
+
+/* Gender */
+.nemRow { display: flex; gap: 12px; margin-bottom: 20px; }
+.nemBtn {
+  flex: 1; padding: 14px;
+  background: #f5f6fa; border: 2px solid #e4e7f0;
+  border-radius: 12px; font-size: 1rem; font-weight: 700;
+  font-family: inherit; color: #555; cursor: pointer;
+  transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.nemBtn:hover { border-color: #f97316; color: #ea580c; }
+.nemActive { background: #fff7ed; border-color: #f97316; color: #ea580c; }
+.nemIcon { font-size: 1.3rem; }
+
+/* Input grid */
+.inputGrid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font-size: 0.83rem; font-weight: 700; color: #444; }
+.inputWrap { position: relative; display: flex; align-items: center; }
+.input {
+  width: 100%; padding: 12px 44px 12px 14px;
+  font-size: 1rem; font-family: inherit;
+  border: 2px solid #e0e3ef; border-radius: 10px;
+  color: #16192e; background: #f7f8fe;
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+}
+.input:focus { border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.12); background: #fff; }
+.unit { position: absolute; right: 12px; font-size: 0.76rem; font-weight: 700; color: #bbb; pointer-events: none; }
+
+/* Activity */
+.aktivitasLista { display: flex; flex-direction: column; gap: 8px; }
+.aktivitasElem {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; background: #f7f8fe;
+  border: 2px solid #e4e7f0; border-radius: 10px;
+  cursor: pointer; transition: all 0.2s;
+}
+.aktivitasElem:hover { border-color: #f97316; background: #fff7ed; }
+.aktivitasAktiv { border-color: #f97316; background: #fff7ed; }
+.aktivitasElem input[type="radio"] { accent-color: #f97316; width: 15px; height: 15px; flex-shrink: 0; }
+.aktivitasIcon { font-size: 1.2rem; }
+.aktivitasText { flex: 1; font-size: 0.88rem; font-weight: 600; color: #333; }
+.aktivitasPal {
+  font-size: 0.78rem; font-weight: 800; color: #f97316;
+  background: rgba(249,115,22,0.1); padding: 3px 9px; border-radius: 100px;
+}
+
+/* Goals */
+.celGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.celBtn {
+  padding: 14px 10px; background: #f7f8fe;
+  border: 2px solid #e4e7f0; border-radius: 12px;
+  font-size: 0.88rem; font-weight: 700; font-family: inherit;
+  color: #444; cursor: pointer; transition: all 0.2s;
+  line-height: 1.4; text-align: center;
+}
+.celBtn:hover { border-color: #f97316; background: #fff7ed; }
+.celAktiv { }
+
+/* Error */
+.hiba {
+  background: #fef2f2; border: 1px solid #fca5a5;
+  color: #b91c1c; padding: 12px 16px;
+  border-radius: 10px; font-size: 0.87rem;
+  font-weight: 600; margin-bottom: 16px;
+}
+
+/* Button */
+.btnSzamit {
+  width: 100%; padding: 16px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #fff; font-size: 1.1rem; font-weight: 800;
+  font-family: inherit; border: none; border-radius: 14px;
+  cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(249,115,22,0.38);
+  margin-top: 8px;
+}
+.btnSzamit:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(249,115,22,0.48); }
+.btnUjra {
+  width: 100%; margin-top: 20px; padding: 13px;
+  background: #f4f5fb; color: #555;
+  font-size: 0.95rem; font-weight: 700;
+  font-family: inherit; border: none; border-radius: 12px;
+  cursor: pointer; transition: background 0.15s;
+}
+.btnUjra:hover { background: #e8eaf0; }
+
+/* ========================
+   RESULTS
+======================== */
+.eredmenyek { animation: felJon 0.35s ease; }
+@keyframes felJon {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.eredmenyFej { margin-bottom: 28px; }
+.eredmenyFej h2 { font-size: 1.45rem; font-weight: 800; color: #16192e; margin-bottom: 4px; }
+.eredmenyFej p { color: #777; font-size: 0.88rem; }
+
+/* Main numbers */
+.foSzamok { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+.foKartya {
+  flex: 1; min-width: 130px; background: #f7f8fe;
+  border: 2px solid #e4e7f0; border-radius: 16px;
+  padding: 16px; display: flex; flex-direction: column; gap: 3px; text-align: center;
+}
+.foKartyaKiemelt { background: #fff7ed; border-color: #f97316; box-shadow: 0 4px 20px rgba(249,115,22,0.14); }
+.foKartyaCim { font-size: 0.74rem; font-weight: 800; color: #999; text-transform: uppercase; letter-spacing: 0.04em; }
+.foKartyaSzam { font-size: 1.9rem; font-weight: 900; color: #16192e; line-height: 1.1; }
+.foKartyaEgyseg { font-size: 0.8rem; color: #aaa; font-weight: 600; }
+.foKartyaMegjegyzes { font-size: 0.76rem; color: #f97316; font-weight: 700; margin-top: 3px; }
+.nyil { font-size: 1.4rem; color: #ccc; flex-shrink: 0; }
+
+/* Macros */
+.makroSzekció { margin-bottom: 22px; }
+.makroCim { font-size: 0.97rem; font-weight: 800; color: #16192e; margin-bottom: 12px; }
+.makroRács { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.makroKártya {
+  border-radius: 14px; padding: 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px; text-align: center;
+}
+.makroFehérje { background: #fef9c3; border: 2px solid #facc15; }
+.makroZsír    { background: #fdf2f8; border: 2px solid #f472b6; }
+.makroSzénh   { background: #eff6ff; border: 2px solid #60a5fa; }
+.makroIkon { font-size: 1.5rem; }
+.makroNév { font-size: 0.72rem; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 0.04em; }
+.makroG { font-size: 1.55rem; font-weight: 900; color: #16192e; line-height: 1.1; }
+.makroKcal { font-size: 0.8rem; color: #888; font-weight: 600; }
+
+/* BMI row */
+.bmiSor {
+  display: flex; align-items: center; gap: 0;
+  background: #f7f8fe; border: 1px solid #e4e7f0;
+  border-radius: 12px; padding: 14px 20px;
+  margin-bottom: 16px; flex-wrap: wrap; gap: 12px;
+}
+.bmiElem { display: flex; align-items: center; gap: 10px; }
+.bmiElvalaszto { width: 1px; height: 36px; background: #e4e7f0; }
+.bmiCimke { font-size: 0.82rem; font-weight: 700; color: #777; }
+.bmiErtek { font-size: 1.45rem; font-weight: 900; color: #16192e; }
+.bmiStátusz { font-size: 0.85rem; font-weight: 700; padding: 3px 10px; border-radius: 100px; background: #f0fdf4; }
+
+.eredmenyMegjegyzes {
+  font-size: 0.79rem; color: #aaa; line-height: 1.6; margin-bottom: 14px;
+  padding: 12px; background: #fafbff; border-radius: 8px; border: 1px solid #eef0f8;
+}
+
+/* ========================
+   CONTENT
+======================== */
+.tartalomSzekció { padding: 60px 0; background: #f5f6fa; }
+.tartalomSzekció:nth-of-type(even) { background: #fff; }
+.cikk { max-width: 820px; margin: 0 auto; }
+.cikk h2 { font-size: 1.5rem; font-weight: 800; color: #16192e; margin-top: 34px; margin-bottom: 12px; line-height: 1.3; }
+.cikk h2:first-child { margin-top: 0; }
+.cikk p { color: #444; font-size: 0.96rem; line-height: 1.82; margin-bottom: 14px; }
+.cikk strong { color: #16192e; }
+
+/* Table */
+.tablaSzekció { padding: 64px 0; background: #fff; }
+.szekcióCím { font-size: 1.6rem; font-weight: 800; color: #16192e; margin-bottom: 12px; line-height: 1.3; }
+.szekcióBevezető { color: #555; font-size: 0.97rem; margin-bottom: 28px; max-width: 720px; line-height: 1.7; }
+.tablaWrap {
+  overflow-x: auto; border-radius: 16px;
+  border: 1px solid #e4e7f0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+}
+.tabla { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.tabla th {
+  background: #16192e; color: #fff;
+  padding: 13px 16px; text-align: left;
+  font-weight: 700; font-size: 0.8rem; white-space: nowrap;
+}
+.tabla td { padding: 12px 16px; border-bottom: 1px solid #f0f2fa; color: #333; }
+.tabla tr:last-child td { border-bottom: none; }
+.tabla tr:nth-child(even) td { background: #fafbff; }
+.tabla tr:hover td { background: #fff7ed; }
+.kcalCella { font-weight: 700; color: #f97316; }
+.tablaMegjegyzes { margin-top: 12px; font-size: 0.8rem; color: #999; line-height: 1.5; }
+
+/* Tips */
+.tippekSzekció { padding: 64px 0; background: #f5f6fa; }
+.tippekRács { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+.tippKartya {
+  background: #fff; border: 1px solid #e4e7f0;
+  border-radius: 16px; padding: 22px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.tippKartya:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.07); border-color: #f97316; }
+.tippIkon { font-size: 1.8rem; display: block; margin-bottom: 10px; }
+.tippKartya h3 { font-size: 0.97rem; font-weight: 800; color: #16192e; margin-bottom: 8px; }
+.tippKartya p { font-size: 0.86rem; color: #555; line-height: 1.7; }
+
+/* FAQ */
+.gyikSzekció { padding: 64px 0; background: #fff; }
+.gyikLista { max-width: 820px; margin: 24px auto 0; display: flex; flex-direction: column; gap: 10px; }
+.gyikElem {
+  background: #f7f8fe; border: 1px solid #e4e7f0;
+  border-radius: 14px; overflow: hidden; cursor: pointer;
+}
+.gyikElem[open] { border-color: #f97316; background: #fff; }
+.gyikKerdes {
+  padding: 16px 20px; font-size: 0.96rem;
+  font-weight: 700; color: #16192e; list-style: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; user-select: none;
+}
+.gyikKerdes::-webkit-details-marker { display: none; }
+.gyikKerdes::after { content: '+'; font-size: 1.4rem; font-weight: 300; color: #f97316; transition: transform 0.2s; }
+.gyikElem[open] .gyikKerdes::after { transform: rotate(45deg); }
+.gyikValasz { padding: 0 20px 18px; font-size: 0.89rem; color: #555; line-height: 1.78; }
+
+/* Footer */
+.lábléc { background: #0f1022; padding: 52px 0 28px; color: rgba(255,255,255,0.6); }
+.láblécTeteje { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 36px; flex-wrap: wrap; gap: 28px; }
+.láblécBrand p { font-size: 0.84rem; max-width: 340px; line-height: 1.65; margin-top: 8px; }
+.láblécLinkek { display: flex; flex-direction: column; gap: 10px; }
+.láblécLinkek a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.87rem; font-weight: 600; transition: color 0.2s; }
+.láblécLinkek a:hover { color: #f97316; }
+.láblécJegyzet {
+  font-size: 0.77rem; color: rgba(255,255,255,0.28);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 22px; line-height: 1.65;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+  .calcCard { padding: 22px 16px; }
+  .inputGrid3 { grid-template-columns: 1fr 1fr; }
+  .celGrid { grid-template-columns: 1fr; }
+  .foSzamok { flex-direction: column; }
+  .nyil { transform: rotate(90deg); }
+  .makroRács { grid-template-columns: repeat(3,1fr); }
+  .tippekRács { grid-template-columns: 1fr; }
+  .heroRight { display: none; }
+  .nav { display: none; }
+  .bmiElvalaszto { display: none; }
+  .bmiSor { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .inputGrid3 { grid-template-columns: 1fr; }
+  .makroRács { grid-template-columns: 1fr; }
+  .methodRow { flex-direction: column; align-items: flex-start; }
+  .h1 { font-size: 1.75rem; }
+}
