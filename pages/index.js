@@ -216,13 +216,13 @@ export default function Home() {
         <meta name="language" content="hu" />
         <meta name="geo.region" content="HU" />
         <meta name="geo.country" content="Hungary" />
-        <link rel="canonical" href="https://www.kaloria-kalkulator.hu/" />
+        <link rel="canonical" href="https://www.kaloriakalkulator9.hu/" />
 
         <meta property="og:title" content="Kalória Kalkulátor 2026 – Napi Kalóriaszükséglet Kiszámítása" />
         <meta property="og:description" content="Ingyenes kalória kalkulátor: Számítsa ki napi kalóriaszükségletét, alapanyagcseréjét, BMI-jét és makrotápanyag-szükségletét egyszerűen és pontosan." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="hu_HU" />
-        <meta property="og:url" content="https://www.kaloria-kalkulator.hu/" />
+        <meta property="og:url" content="https://www.kaloriakalkulator9.hu/" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kalória Kalkulátor 2026 – Ingyenes Magyar Kalóriaszámoló" />
