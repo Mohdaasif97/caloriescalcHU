@@ -1,0 +1,599 @@
+.card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 52px rgba(0, 0, 0, 0.1);
+  padding: 44px;
+  max-width: 880px;
+  margin: 0 auto;
+  border: 1px solid #e8eaf0;
+}
+
+.cardHeader {
+  margin-bottom: 28px;
+}
+
+.cardHeader h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #16192e;
+  margin-bottom: 6px;
+}
+
+.cardHeader p {
+  color: #4b5563;
+  font-size: 0.93rem;
+}
+
+/* Method */
+.methodRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.methodLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #555;
+  white-space: nowrap;
+}
+
+.methodBtns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.methodBtn {
+  padding: 8px 16px;
+  background: #f4f5fb;
+  border: 2px solid #e4e7f0;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.methodBtn:hover {
+  border-color: #f97316;
+  color: #ea580c;
+}
+
+.methodActive {
+  border-color: #f97316;
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.methodTag {
+  background: #c2410c;
+  color: #fff;
+  font-size: 0.68rem;
+  padding: 2px 6px;
+  border-radius: 100px;
+  font-weight: 800;
+}
+
+/* Steps */
+.step {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #f0f2fa;
+}
+
+.step:last-of-type {
+  border-bottom: none;
+}
+
+.stepHead {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepNum {
+  background: #f97316;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* Gender */
+.nemRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.nemBtn {
+  flex: 1;
+  padding: 14px;
+  background: #f5f6fa;
+  border: 2px solid #e4e7f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nemBtn:hover {
+  border-color: #f97316;
+  color: #ea580c;
+}
+
+.nemActive {
+  background: #fff7ed;
+  border-color: #f97316;
+  color: #9a3412;
+}
+
+/* Inputs */
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 44px 12px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #e0e3ef;
+  border-radius: 10px;
+  color: #16192e;
+  background: #f7f8fe;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+  background: #fff;
+}
+
+.unit {
+  position: absolute;
+  right: 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+/* Activity */
+.aktivitasLista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aktivitasElem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f7f8fe;
+  border: 2px solid #e4e7f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aktivitasElem:hover {
+  border-color: #f97316;
+  background: #fff7ed;
+}
+
+.aktivitasAktiv {
+  border-color: #f97316;
+  background: #fff7ed;
+}
+
+.aktivitasElem input[type='radio'] {
+  accent-color: #f97316;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.aktivitasText {
+  flex: 1;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.aktivitasPal {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #9a3412;
+  background: rgba(249, 115, 22, 0.1);
+  padding: 3px 9px;
+  border-radius: 100px;
+}
+
+/* Goals */
+.celGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.celBtn {
+  padding: 14px 10px;
+  background: #f7f8fe;
+  border: 2px solid #e4e7f0;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.celBtn:hover {
+  border-color: #f97316;
+  background: #fff7ed;
+}
+
+/* Error */
+.hiba {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.87rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Buttons */
+.btnSzamit {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: inherit;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.38);
+  margin-top: 8px;
+}
+
+.btnSzamit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(249, 115, 22, 0.48);
+}
+
+.btnUjra {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  background: #f4f5fb;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnUjra:hover {
+  background: #e8eaf0;
+}
+
+/* Results */
+.eredmenyek {
+  animation: felJon 0.35s ease;
+}
+
+@keyframes felJon {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eredmenyFej {
+  margin-bottom: 28px;
+}
+
+.eredmenyFej h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #16192e;
+  margin-bottom: 4px;
+}
+
+.eredmenyFej p {
+  color: #4b5563;
+  font-size: 0.88rem;
+}
+
+.foSzamok {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.foKartya {
+  flex: 1;
+  min-width: 130px;
+  background: #f7f8fe;
+  border: 2px solid #e4e7f0;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: center;
+}
+
+.foKartyaKiemelt {
+  background: #fff7ed;
+  border-color: #f97316;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.14);
+}
+
+.foKartyaCim {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.foKartyaSzam {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #16192e;
+  line-height: 1.1;
+}
+
+.foKartyaEgyseg {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.foKartyaMegjegyzes {
+  font-size: 0.76rem;
+  color: #f97316;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+/* Macros */
+.makroSzekcio {
+  margin-bottom: 22px;
+}
+
+.makroCim {
+  font-size: 0.97rem;
+  font-weight: 800;
+  color: #16192e;
+  margin-bottom: 12px;
+}
+
+.makroRacs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.makroKartya {
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-align: center;
+}
+
+.makroFeherje {
+  background: #fef9c3;
+  border: 2px solid #facc15;
+}
+
+.makroZsir {
+  background: #fdf2f8;
+  border: 2px solid #f472b6;
+}
+
+.makroSzenh {
+  background: #eff6ff;
+  border: 2px solid #60a5fa;
+}
+
+.makroIkon {
+  font-size: 1.5rem;
+}
+
+.makroNev {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.makroG {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #16192e;
+  line-height: 1.1;
+}
+
+.makroKcal {
+  font-size: 0.8rem;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+/* BMI */
+.bmiSor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f7f8fe;
+  border: 1px solid #e4e7f0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.bmiElem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bmiElvalaszto {
+  width: 1px;
+  height: 36px;
+  background: #e4e7f0;
+}
+
+.bmiCimke {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.bmiErtek {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #16192e;
+}
+
+.bmiStatus {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: #f0fdf4;
+}
+
+.eredmenyMegjegyzes {
+  font-size: 0.79rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  padding: 12px;
+  background: #fafbff;
+  border-radius: 8px;
+  border: 1px solid #eef0f8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 22px 16px;
+  }
+
+  .inputGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .celGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .foSzamok {
+    flex-direction: column;
+  }
+
+  .makroRacs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bmiElvalaszto {
+    display: none;
+  }
+
+  .bmiSor {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .makroRacs {
+    grid-template-columns: 1fr;
+  }
+
+  .methodRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
