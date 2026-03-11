@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -67,23 +68,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.region" content="HU" />
         <meta name="geo.country" content="Hungary" />
         <meta name="language" content="hu" />
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5BK32GTSN" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-V5BK32GTSN');
-            `,
-          }}
-        />
       </head>
       <body>
         <Header />
         <main>{children}</main>
         <Footer />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-V5BK32GTSN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V5BK32GTSN');
+          `}
+        </Script>
       </body>
     </html>
   );
